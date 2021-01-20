@@ -5,10 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.Set;
 
 @Data
@@ -18,10 +15,12 @@ import java.util.Set;
 public class Recipe {
 
     @Id
-    @GeneratedValue
-    private final String id;
-
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private final long id;
     private final String name;
+
+    private final Integer preparationTimeInMinutes;
+    private final Integer cookingTimeInMinutes;
 
     @ManyToMany(targetEntity = Ingredient.class)
     private final Set<Ingredient> ingredients;

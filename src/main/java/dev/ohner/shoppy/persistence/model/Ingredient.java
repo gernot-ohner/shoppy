@@ -3,6 +3,8 @@ package dev.ohner.shoppy.persistence.model;
 import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Data
@@ -12,8 +14,8 @@ import javax.persistence.Id;
 public class Ingredient {
 
     @Id
-    private final String id;
-
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private final long id;
     private final String name;
 
 }
