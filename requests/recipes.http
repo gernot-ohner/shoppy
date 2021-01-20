@@ -1,0 +1,19 @@
+
+http://localhost:8080/recipes
+
+###
+
+POST http://localhost:8080/recipes
+Content-Type: application/json
+
+{
+  "id": 12,
+  "name": "test",
+  "ingredients": [
+    {
+      "name": "milk"
+    }, {
+      "name": "oats"
+    }
+  ]
+}

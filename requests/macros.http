@@ -1,0 +1,7 @@
+# curl -H "Content-Type: application/json" -H "x-app-id: <your app id>" -H "x-app-key: <your app key>" https://trackapi.nutritionix.com/v2/search/instant?query=apple
+GET https://trackapi.nutritionix.com/v2/search/instant?query=apple
+x-app-id: e548e1a6
+x-app-key: c72c220015f8478708cc5e06b0a887c2
+Content-Type: application/json
+
+
